@@ -1,0 +1,1 @@
+python attack.py --config parameter/bert_ag.yaml --vGPU 0

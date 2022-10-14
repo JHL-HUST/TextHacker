@@ -1,0 +1,1 @@
+python attack.py --config parameter/lstm_imdb.yaml --vGPU 0

@@ -1,0 +1,33 @@
+{
+  GPU: {
+    use_gpu: True, 
+    device_id: [0],      
+  },
+
+  CONFIG: {
+      model_name: 'Bert',        
+      attack_name: 'TextHacker',  
+  },
+
+  AdvDataset: {
+      dataset_path: './data/dataset/yelp',     
+  },
+
+  Bert: {
+      pretrained_dir: './data/model/bert/yelp',                
+      nclasses: 2,                      
+      max_seq_length: 256,               
+      batch_size: 32,                   
+  },
+
+  TextHacker: {
+      allowed_query_num: 2000,                    # Query budget
+      neighbor_delta: 5,                          # Neighborhood size
+      population_size: 4,                         # Population size
+      local_search_num: 8,                        # Maximum number of local search
+      synonym_num: 4,                            # Synonym number
+      embedding_path: './data/aux_files/counter-fitted-vectors.txt',       # The path to the counter-fitting embeddings we used to find synonyms
+      cos_path:  './data/aux_files/mat.txt'            # The pre-compute the cosine similarity scores based on the counter-fitting embeddings
+  }
+
+}

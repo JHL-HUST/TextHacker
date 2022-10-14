@@ -1,0 +1,1 @@
+python attack.py --config parameter/bert_yelp.yaml --vGPU 0

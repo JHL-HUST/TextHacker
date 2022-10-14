@@ -1,0 +1,1 @@
+python attack_nli.py --config parameter/bert_snli.yaml --vGPU 0

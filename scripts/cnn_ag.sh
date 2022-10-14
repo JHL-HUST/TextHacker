@@ -1,0 +1,1 @@
+python attack.py --config parameter/cnn_ag.yaml --vGPU 0
